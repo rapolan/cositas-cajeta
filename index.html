@@ -232,6 +232,23 @@
             color: #fff8ed;
         }
 
+        .order-timeline {
+            background: rgba(220, 165, 95, 0.2);
+            padding: 15px 25px;
+            border-radius: 15px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(220, 165, 95, 0.4);
+        }
+
+        .order-timeline p {
+            color: #f5e6d3;
+            font-size: 0.95em;
+            margin: 0;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
         .submit-button {
             background: linear-gradient(135deg, #f0c678 0%, #dea958 100%);
             color: #1a0f05;
@@ -377,7 +394,11 @@
                 </div>
                 
                 <input type="text" name="payment" placeholder="Payment Preference" required>
-                
+
+                <div class="order-timeline">
+                    <p>*Please allow up to 7 days to complete your order. We will do our best to get it to you as soon as possible!</p>
+                </div>
+
                 <button type="submit" class="submit-button">Send Message</button>
             </form>
         </div>
