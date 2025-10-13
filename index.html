@@ -13,9 +13,15 @@
 
         body {
             font-family: 'Georgia', serif;
-            background: linear-gradient(135deg, #5a3a1f 0%, #4a2f18 100%);
+            background: linear-gradient(135deg, #7d5a3a 0%, #6b4a30 100%);
             min-height: 100vh;
             padding: 20px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: linear-gradient(135deg, #3a2817 0%, #2a1f12 100%);
+            }
         }
 
         .language-toggle {
@@ -27,9 +33,10 @@
 
         .language-toggle a {
             display: inline-block;
-            background: linear-gradient(135deg, #b8752d 0%, #a0631d 100%);
-            color: #fff;
+            background: linear-gradient(135deg, #3d2415 0%, #2d1810 100%);
+            color: #f5f1e8;
             padding: 10px 20px;
+            border: 2px solid rgba(245, 241, 232, 0.3);
             border-radius: 25px;
             text-decoration: none;
             font-size: 0.9em;
@@ -41,7 +48,8 @@
         .language-toggle a:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
-            background: linear-gradient(135deg, #c8853d 0%, #b0732d 100%);
+            background: linear-gradient(135deg, #4d3425 0%, #3d2415 100%);
+            border-color: rgba(245, 241, 232, 0.5);
         }
 
         .page-section {
@@ -53,7 +61,7 @@
         }
 
         .container {
-            background: linear-gradient(135deg, rgba(230, 180, 90, 0.95) 0%, rgba(210, 160, 75, 0.96) 100%);
+            background: linear-gradient(135deg, rgba(184, 134, 11, 0.95) 0%, rgba(160, 115, 8, 0.96) 100%);
             backdrop-filter: blur(10px);
             border-radius: 20px;
             padding: 60px 40px;
@@ -61,12 +69,23 @@
             width: 100%;
             text-align: center;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6),
-                        inset 0 2px 20px rgba(255, 220, 140, 0.3),
-                        0 0 0 8px rgba(200, 150, 70, 0.5),
-                        0 0 0 16px rgba(180, 130, 60, 0.4);
+                        inset 0 2px 20px rgba(218, 165, 32, 0.3),
+                        0 0 0 8px rgba(170, 125, 15, 0.5),
+                        0 0 0 16px rgba(150, 110, 10, 0.4);
             animation: fadeIn 0.8s ease-in;
-            border: 3px solid rgba(160, 110, 50, 0.6);
+            border: 3px solid rgba(130, 95, 5, 0.6);
             position: relative;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .container {
+                background: linear-gradient(135deg, rgba(150, 110, 8, 0.96) 0%, rgba(130, 95, 5, 0.97) 100%);
+                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8),
+                            inset 0 2px 20px rgba(180, 140, 25, 0.3),
+                            0 0 0 8px rgba(140, 100, 10, 0.5),
+                            0 0 0 16px rgba(120, 85, 8, 0.4);
+                border: 3px solid rgba(100, 70, 3, 0.7);
+            }
         }
 
         @keyframes fadeIn {
@@ -82,18 +101,18 @@
 
         h1 {
             font-size: 5.5em;
-            color: #3d2415;
+            color: #f5f1e8;
             margin-bottom: 20px;
             font-weight: 400;
             letter-spacing: 1px;
-            text-shadow: 0 3px 15px rgba(255, 200, 100, 0.4);
+            text-shadow: 0 3px 15px rgba(0, 0, 0, 0.5);
             font-family: 'Brush Script MT', 'Lucida Handwriting', cursive;
             font-style: italic;
         }
 
         .subtitle {
             font-size: 1.1em;
-            color: #4a2f18;
+            color: #f5f1e8;
             line-height: 1.6;
             margin-bottom: 20px;
             font-family: 'Arial', sans-serif;
@@ -107,7 +126,7 @@
         }
 
         .ingredients-title {
-            color: #3d2415;
+            color: #f5f1e8;
             font-size: 0.9em;
             margin-bottom: 30px;
         }
@@ -129,7 +148,7 @@
         .ingredients-list li {
             position: relative;
             padding-left: 25px;
-            color: #4a2f18;
+            color: #f5f1e8;
             font-size: 1.0em;
             line-height: 1.8;
             text-align: left;
@@ -142,27 +161,27 @@
             top: 7px;
             width: 10px;
             height: 14px;
-            background: #b8752d;
+            background: #3d2415;
             border-radius: 50% 50% 50% 0%;
             transform: rotate(135deg);
         }
 
         .organic-note {
-            color: #4a2f18;
+            color: #f5f1e8;
             margin-top: 20px;
             font-size: 0.9em;
             font-style: italic;
         }
 
         .tagline {
-            color: #4a2f18;
+            color: #f5f1e8;
             margin-top: 30px;
             font-style: italic;
         }
 
         .scroll-indicator {
             margin-top: 40px;
-            color: #4a2f18;
+            color: #f5f1e8;
             font-size: 0.9em;
         }
 
@@ -183,8 +202,8 @@
 
         .made-to-order {
             font-size: 0.9em;
-            color: #3d2415;
-            background: rgba(180, 130, 60, 0.3);
+            color: #f5f1e8;
+            background: rgba(61, 36, 21, 0.4);
             padding: 8px 20px;
             border-radius: 25px;
             display: inline-block;
@@ -193,7 +212,7 @@
             letter-spacing: 2px;
             text-transform: uppercase;
             font-weight: 600;
-            border: 2px solid rgba(80, 50, 25, 0.5);
+            border: 2px solid rgba(245, 241, 232, 0.5);
         }
 
         .contact-form {
@@ -204,7 +223,7 @@
 
         .contact-form h2 {
             font-size: 1.8em;
-            color: #3d2415;
+            color: #f5f1e8;
             margin-bottom: 25px;
             font-weight: 400;
         }
@@ -214,25 +233,25 @@
             width: 100%;
             padding: 15px;
             margin-bottom: 15px;
-            border: 2px solid rgba(100, 65, 30, 0.4);
+            border: 2px solid rgba(61, 36, 21, 0.5);
             border-radius: 10px;
             font-size: 1em;
             font-family: 'Arial', sans-serif;
             transition: border-color 0.3s ease;
-            background: rgba(255, 235, 200, 0.9);
-            color: #3d2415;
+            background: rgba(245, 241, 232, 0.15);
+            color: #f5f1e8;
         }
 
         .contact-form input::placeholder,
         .contact-form textarea::placeholder {
-            color: #a8865d;
+            color: rgba(245, 241, 232, 0.6);
         }
 
         .contact-form input:focus,
         .contact-form textarea:focus {
             outline: none;
-            border-color: #b8752d;
-            background: rgba(255, 245, 220, 1);
+            border-color: #f5f1e8;
+            background: rgba(245, 241, 232, 0.25);
         }
 
         .contact-form textarea {
@@ -241,34 +260,34 @@
         }
 
         .payment-info {
-            background: rgba(180, 130, 60, 0.25);
+            background: rgba(61, 36, 21, 0.3);
             padding: 15px 25px;
             border-radius: 15px;
             margin-bottom: 15px;
-            border: 1px solid rgba(100, 65, 30, 0.4);
+            border: 1px solid rgba(245, 241, 232, 0.3);
         }
 
         .payment-info p {
-            color: #4a2f18;
+            color: #f5f1e8;
             font-size: 1em;
             margin: 0;
         }
 
         .payment-info strong {
-            color: #3d2415;
+            color: #fff;
         }
 
         .order-timeline {
-            background: rgba(180, 130, 60, 0.25);
+            background: rgba(61, 36, 21, 0.3);
             padding: 15px 25px;
             border-radius: 15px;
             margin-top: 15px;
             margin-bottom: 15px;
-            border: 1px solid rgba(100, 65, 30, 0.4);
+            border: 1px solid rgba(245, 241, 232, 0.3);
         }
 
         .order-timeline p {
-            color: #4a2f18;
+            color: #f5f1e8;
             font-size: 0.95em;
             margin: 0;
             font-style: italic;
@@ -276,10 +295,10 @@
         }
 
         .submit-button {
-            background: linear-gradient(135deg, #b8752d 0%, #a0631d 100%);
-            color: #fff;
+            background: linear-gradient(135deg, #3d2415 0%, #2d1810 100%);
+            color: #f5f1e8;
             padding: 15px 40px;
-            border: none;
+            border: 2px solid rgba(245, 241, 232, 0.3);
             border-radius: 50px;
             font-size: 1.1em;
             cursor: pointer;
@@ -292,7 +311,8 @@
         .submit-button:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
-            background: linear-gradient(135deg, #c8853d 0%, #b0732d 100%);
+            background: linear-gradient(135deg, #4d3425 0%, #3d2415 100%);
+            border-color: rgba(245, 241, 232, 0.5);
         }
 
         /* Tablet */
