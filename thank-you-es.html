@@ -13,12 +13,18 @@
 
         body {
             font-family: 'Georgia', serif;
-            background: linear-gradient(135deg, #d49d5a 0%, #e6af66 100%);
+            background: linear-gradient(135deg, #faf3e8 0%, #f7e8c8 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 20px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: linear-gradient(135deg, #9a4513 0%, #b56324 100%);
+            }
         }
 
         .language-toggle {
@@ -30,51 +36,65 @@
 
         .language-toggle a {
             display: inline-block;
-            background: linear-gradient(135deg, #f0c678 0%, #dea958 100%);
-            color: #1a0f05;
+            background: linear-gradient(135deg, #d08030 0%, #cfa982 100%);
+            color: #9a4513;
             padding: 10px 20px;
+            border: 2px solid rgba(154, 69, 19, 0.3);
             border-radius: 25px;
             text-decoration: none;
             font-size: 0.9em;
             font-weight: 600;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(220, 165, 95, 0.3);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
         }
 
         .language-toggle a:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(220, 165, 95, 0.5);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+            background: linear-gradient(135deg, #cfa982 0%, #d08030 100%);
+            border-color: rgba(154, 69, 19, 0.5);
         }
 
         .container {
-            background: linear-gradient(135deg, rgba(95, 60, 30, 0.92) 0%, rgba(115, 70, 40, 0.90) 100%);
+            background: linear-gradient(135deg, rgba(181, 99, 36, 0.96) 0%, rgba(154, 69, 19, 0.97) 100%);
             backdrop-filter: blur(10px);
             border-radius: 20px;
             padding: 60px 40px;
             max-width: 600px;
             width: 100%;
             text-align: center;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4),
-                        inset 0 2px 20px rgba(155, 100, 55, 0.2),
-                        0 0 0 8px rgba(175, 115, 65, 0.35),
-                        0 0 0 16px rgba(155, 100, 55, 0.25);
-            border: 3px solid rgba(155, 100, 55, 0.45);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6),
+                        inset 0 2px 20px rgba(208, 128, 48, 0.4),
+                        0 0 0 8px rgba(207, 169, 130, 0.5),
+                        0 0 0 16px rgba(181, 99, 36, 0.4);
+            border: 3px solid rgba(154, 69, 19, 0.6);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .container {
+                background: linear-gradient(135deg, rgba(154, 69, 19, 0.97) 0%, rgba(181, 99, 36, 0.98) 100%);
+                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8),
+                            inset 0 2px 20px rgba(208, 128, 48, 0.3),
+                            0 0 0 8px rgba(181, 99, 36, 0.5),
+                            0 0 0 16px rgba(154, 69, 19, 0.4);
+                border: 3px solid rgba(154, 69, 19, 0.7);
+            }
         }
 
         h1 {
             font-size: 3.5em;
-            color: #fff8ed;
+            color: #f5f1e8;
             margin-bottom: 20px;
             font-weight: 400;
             letter-spacing: 1px;
-            text-shadow: 0 3px 15px rgba(245, 230, 211, 0.5);
+            text-shadow: 0 3px 15px rgba(0, 0, 0, 0.5);
             font-family: 'Brush Script MT', 'Lucida Handwriting', cursive;
             font-style: italic;
         }
 
         .message {
             font-size: 1.2em;
-            color: #f5e6d3;
+            color: #f5f1e8;
             line-height: 1.8;
             margin-bottom: 30px;
         }
@@ -96,21 +116,24 @@
 
         .back-link {
             display: inline-block;
-            background: linear-gradient(135deg, #f0c678 0%, #dea958 100%);
-            color: #1a0f05;
+            background: linear-gradient(135deg, #d08030 0%, #cfa982 100%);
+            color: #9a4513;
             padding: 15px 40px;
+            border: 2px solid rgba(154, 69, 19, 0.3);
             border-radius: 50px;
             text-decoration: none;
             font-size: 1.1em;
             font-weight: 600;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(220, 165, 95, 0.3);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
             margin-top: 20px;
         }
 
         .back-link:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(220, 165, 95, 0.5);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+            background: linear-gradient(135deg, #cfa982 0%, #d08030 100%);
+            border-color: rgba(154, 69, 19, 0.5);
         }
 
         @media (max-width: 600px) {
@@ -157,7 +180,7 @@
         <p class="message" style="font-size: 1em; margin-top: 20px;">
             Revisa tu correo electrónico para la confirmación.
         </p>
-        <p class="message" style="font-size: 0.95em; margin-top: 25px; font-style: italic; background: rgba(220, 165, 95, 0.2); padding: 15px; border-radius: 10px; border: 1px solid rgba(220, 165, 95, 0.4);">
+        <p class="message" style="font-size: 0.95em; margin-top: 25px; font-style: italic; background: rgba(208, 128, 48, 0.25); padding: 15px; border-radius: 10px; border: 1px solid rgba(207, 169, 130, 0.4);">
             <strong>Nota importante:</strong> Los pedidos pueden tomar hasta 7 días para completarse. ¡Haremos nuestro mejor esfuerzo para entregarlo lo antes posible!
         </p>
         <a href="/index-es.html" class="back-link">Volver al Inicio</a>
