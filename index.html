@@ -282,8 +282,89 @@
         .contact-form h2 {
             font-size: 1.8em;
             color: #f5f1e8;
+            margin-bottom: 15px;
+            font-weight: 400;
+        }
+
+        .contact-form h3 {
+            font-size: 1.1em;
+            color: #ffc107;
             margin-bottom: 25px;
             font-weight: 400;
+            font-style: italic;
+        }
+
+        .fulfillment-options {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .fulfillment-options > label {
+            display: block;
+            color: #ffc107;
+            font-size: 0.95em;
+            margin-bottom: 12px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .radio-option {
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            background: rgba(208, 128, 48, 0.15);
+            border: 2px solid rgba(207, 169, 130, 0.3);
+            border-radius: 10px;
+            color: #f5f1e8;
+            font-size: 0.9em;
+            cursor: pointer;
+            line-height: 1.5;
+            transition: all 0.3s ease;
+        }
+
+        .radio-option:hover {
+            background: rgba(208, 128, 48, 0.25);
+            border-color: rgba(207, 169, 130, 0.5);
+            transform: translateY(-1px);
+        }
+
+        .radio-option input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .radio-option input[type="radio"]:checked + .radio-icon {
+            color: #ffc107;
+        }
+
+        .radio-option input[type="radio"]:checked ~ .radio-text {
+            color: #fff;
+        }
+
+        .radio-option:has(input[type="radio"]:checked) {
+            background: rgba(255, 193, 7, 0.2);
+            border-color: #ffc107;
+            box-shadow: 0 0 0 1px rgba(255, 193, 7, 0.5);
+        }
+
+        .radio-icon {
+            font-size: 1.4em;
+            margin-right: 12px;
+            transition: color 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .radio-text {
+            flex: 1;
+            transition: color 0.3s ease;
         }
 
         .contact-form input,
@@ -321,6 +402,7 @@
             background: rgba(208, 128, 48, 0.25);
             padding: 15px 25px;
             border-radius: 15px;
+            margin-top: 35px;
             margin-bottom: 15px;
             border: 1px solid rgba(207, 169, 130, 0.4);
         }
@@ -428,6 +510,28 @@
                 font-size: 1.4em;
             }
 
+            .contact-form h3 {
+                font-size: 1em;
+            }
+
+            .fulfillment-options > label {
+                font-size: 0.85em;
+            }
+
+            .radio-option {
+                font-size: 0.85em;
+                padding: 10px 12px;
+            }
+
+            .radio-icon {
+                font-size: 1.2em;
+                margin-right: 10px;
+            }
+
+            .payment-info {
+                margin-top: 20px;
+            }
+
             .contact-form input,
             .contact-form textarea {
                 font-size: 0.95em;
@@ -509,7 +613,7 @@
     <div class="page-section">
         <div class="container">
             <p class="subtitle">
-                Thank you for visiting! While we're still working to get my website up and running, you can get in touch below. (:
+                Thank you for visiting! While we're still working to get our website up and running, you can get in touch below. (:
             </p>
             
             <div class="honey-icon">🍯</div>
@@ -527,14 +631,31 @@
 
             <form class="contact-form" name="contact" method="POST" netlify action="/thank-you.html">
                 <h2>Get in Touch</h2>
-
+                <h3>Now serving Chula Vista and Tijuana</h3>
+                    
                 <input type="text" name="name" placeholder="name *" required>
                 
                 <input type="email" name="email" placeholder="email *" required>
                 
                 <input type="tel" name="phone" placeholder="phone">
-                
+
                 <textarea name="message" rows="4" placeholder="number of jars, custom orders (5+), inquiries.." required></textarea>
+
+                <div class="fulfillment-options">
+                    <label>Fulfillment Method *</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="fulfillment" value="pickup" required>
+                            <span class="radio-icon">📦</span>
+                            <span class="radio-text">Pickup - 265 Third Ave, Chula Vista</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="fulfillment" value="delivery">
+                            <span class="radio-icon">🚗</span>
+                            <span class="radio-text">Delivery - Chula Vista area (bulk orders 5+ jars only)</span>
+                        </label>
+                    </div>
+                </div>
                 
                 <div class="payment-info">
                     <p><strong>Payment Options:</strong> Venmo • Zelle • Cash • Bitcoin</p>
